@@ -1,24 +1,20 @@
-# AccountAging
+# AccountProcessing
 
-**TODO: Add description**
+An example application that demostrates concurrent processing of customer
+accounts.
 
-## Installation
+## Usage
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+```
+> iex -S mix
+```
 
-  1. Add `account_aging` to your list of dependencies in `mix.exs`:
+Pass in the number of accounts to process:
 
-    ```elixir
-    def deps do
-      [{:account_aging, "~> 0.1.0"}]
-    end
-    ```
+```
+AccountProcessing.run(1000)
+```
 
-  2. Ensure `account_aging` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:account_aging]]
-    end
-    ```
+The system will create test data including test credits and debits. It then
+calculates the ending balance for the account.
 
